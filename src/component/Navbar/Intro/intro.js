@@ -1,7 +1,6 @@
 import React from 'react'
 import './intro.css'
 import bg from '../../../assets/profilepic.png'
-import { Link } from 'react-scroll';
 import download from '../../../assets/download.png'
 const Intro = () => {
   return (
