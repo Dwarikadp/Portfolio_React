@@ -1,0 +1,105 @@
+#skills {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.skillDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 60rem;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width:350px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background-color:white;
+  color: rgb(6, 6, 6);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.flip-card-front.hover{
+ background-color: gold;
+}
+ .flip-card-back.hover{
+  background-color: gold;
+ } 
+
+.flip-card-front img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+  font-weight: 300;
+  padding: 2rem;
+  line-height: 1.4;
+  background-color: gold;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}

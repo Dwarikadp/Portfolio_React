@@ -1,0 +1,117 @@
+/* Styles for the Experience Section */
+#experience {
+  padding: 40px 20px;
+  background-color: #0d0c0c;
+}
+
+.contactTitle {
+ font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color:white;
+}
+
+/* Individual Internship Items */
+.experience-item {
+  background-color: rgb(50, 47, 47);
+  border-left: 4px solid ;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.experience-item h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.experience-item p {
+  font-size: 14px;
+  color:white;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+#contact {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+.contactPagetitle {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.contactDesc{
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.contactForm{
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 60rem;
+
+}
+.name,.email,.msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin:0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40, 40, 40);
+}
+.submitBtn{
+    background: white;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+}
+.submitBtn:hover{
+    background: gold;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+
+}
+.link {
+  object-fit: cover;
+  height: 0.2rem;
+  width: 0.2rem;
+  margin: 2rem;
+  transition: transform 0.2s ease;
+}
+.link img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+
+}
+.link:hover {
+  transform: scale(1.1);
+}

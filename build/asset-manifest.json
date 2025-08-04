@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ee4aee6.css",
+    "main.js": "/static/js/main.ac114ba4.js",
+    "static/media/Game trailer.mp4": "/static/media/Game trailer.8c3fd5f74608d786eccc.mp4",
+    "static/media/Edits 1 sula vineyard.mp4": "/static/media/Edits 1 sula vineyard.4d21dd1e07e10edffba8.mp4",
+    "static/media/dove.png": "/static/media/dove.244b10892644c803b788.png",
+    "static/media/Ganesh.png": "/static/media/Ganesh.eac4d524ad8bd0e9538e.png",
+    "static/media/Jatani.png": "/static/media/Jatani.7b0dea8237e4713441f7.png",
+    "static/media/Marinedrive.png": "/static/media/Marinedrive.84ed681cbfe11268b8c0.png",
+    "static/media/building.png": "/static/media/building.8547960a1dd3575d8780.png",
+    "static/media/walk.png": "/static/media/walk.2eb8f18c094c5546688f.png",
+    "static/media/road.png": "/static/media/road.f5631105f6adf59571ba.png",
+    "static/media/swift.png": "/static/media/swift.8555bc31a4862c71825f.png",
+    "static/media/jhumer.png": "/static/media/jhumer.690da6dbea3909854ac4.png",
+    "static/media/Killa.png": "/static/media/Killa.281c309e994563bbd645.png",
+    "static/media/train.png": "/static/media/train.17c41c22f8c3dbb1dbb5.png",
+    "static/media/sleep.png": "/static/media/sleep.fc88d00b353e68c279ae.png",
+    "static/media/hotel.png": "/static/media/hotel.9cba6edc011e4c8379e0.png",
+    "static/media/profilepic.png": "/static/media/profilepic.fe625594a35b4b562635.png",
+    "static/media/DPlogo.png": "/static/media/DPlogo.41a665c13ecd383d0b16.png",
+    "static/media/wanderInd.png": "/static/media/wanderInd.d7ba2e5fbd7bf283a1f2.png",
+    "static/media/SentiAnl.png": "/static/media/SentiAnl.c7ec2f10d1a7601580e4.png",
+    "static/media/Web dev.png": "/static/media/Web dev.f9d169e80e84e333a6d1.png",
+    "static/media/ux.png": "/static/media/ux.ffa3e0dd754dc923e50b.png",
+    "static/media/Videoedit.png": "/static/media/Videoedit.cbc1e8c3af061f6ac362.png",
+    "static/media/Contact.png": "/static/media/Contact.b1e86863928f2bbbf228.png",
+    "index.html": "/index.html",
+    "main.8ee4aee6.css.map": "/static/css/main.8ee4aee6.css.map",
+    "main.ac114ba4.js.map": "/static/js/main.ac114ba4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ee4aee6.css",
+    "static/js/main.ac114ba4.js"
+  ]
+}
