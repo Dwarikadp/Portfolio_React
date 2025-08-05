@@ -9,7 +9,7 @@ const Intro = () => {
 <span className="hello">Hello</span><br />
 <span className="introText">I'm <span className="introName">Dwarika</span><br />FullStack Web Developer</span>
 <p className="introPara">I'm a passionate Full Stack Web Developer with experience in building responsive and dynamic web applications using modern technologies like React, Node.js, MongoDB, and Express.</p>
-<a href="/DwarikaResumeN.pdf" download>
+<a href="./assets/DPRes.pdf" download>
   <button className="btn">
     <img src={download} alt="download" className="btnImg" />
     Download CV
