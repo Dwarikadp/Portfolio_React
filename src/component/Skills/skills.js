@@ -1,46 +1,126 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './skills.css';
 
-import UIDesign from '../../assets/ux.png';
-import WebDesign from '../../assets/Web dev.png';
-import VideoEdit from '../../assets/Videoedit.png';
-
-const skills = [
+const skillCategories = [
   {
-    title: "Web Design",
-    image: WebDesign,
-    description: "I'm a full-stack web developer skilled in both frontend and backend development. While I can build complete web applications, I’m especially passionate about the design phase—creating clean, user-focused interfaces and engaging digital experiences"
+    id: 'enterprise-erp',
+    title: 'Enterprise & ERP Systems',
+    icon: '🏢',
+    desc: 'Functional ERP administration, enterprise workflow automation, and cross-departmental operations.',
+    skills: [
+      { name: 'Farvision ERP', level: 'Finance, CRM, HRMS, Materials, Payroll' },
+      { name: 'Microsoft 365 Admin', level: 'User & License Management, Security' },
+      { name: 'Power Automate', level: 'Workflow & Outlook Automation' },
+      { name: 'HRMS & Payroll', level: 'Employee Lifecycle & Compliance' },
+      { name: 'MIS Reporting', level: 'Executive Summaries & Analysis' }
+    ]
   },
   {
-    title: "UI/UX Design",
-    image: UIDesign,
-    description: "I'm currently exploring the world of UI/UX design. With a strong foundation in visual creativity, I’m learning to design clean, intuitive interfaces using tools like Figma. I can confidently create basic layouts and user flows, and I’m continuously improving my ability to turn ideas into meaningful, user-friendly designs"
+    id: 'web-fullstack',
+    title: 'Full Stack Web Engineering',
+    icon: '💻',
+    desc: 'Modern web architectures from reactive frontends to robust databases and secure APIs.',
+    skills: [
+      { name: 'React.js', level: 'Hooks, State, Virtual DOM, SPAs' },
+      { name: 'Node.js & Express.js', level: 'RESTful Backend & Microservices' },
+      { name: 'Supabase', level: 'Real-time DB, Auth & Storage' },
+      { name: 'MongoDB', level: 'NoSQL Schema Design & Aggregation' },
+      { name: 'SQL & Relational DBs', level: 'Queries, Normalization & Indexing' }
+    ]
   },
   {
-    title: "Video Edit",
-    image: VideoEdit,
-    description: "I create and edit a variety of video content, from travel vlogs and product promos to event highlights and storytelling reels. With a creative eye for pacing, visuals, and music, I aim to produce videos that are not only visually appealing but also emotionally engaging. Whether it's for social media, YouTube, or brand marketing, I bring ideas to life through thoughtful editing"
+    id: 'programming-core',
+    title: 'Programming & Languages',
+    icon: '⚡',
+    desc: 'Strong algorithmic foundation and multi-paradigm software development.',
+    skills: [
+      { name: 'Python', level: 'Data Science, PyTorch, Automation' },
+      { name: 'JavaScript (ES6+)', level: 'Frontend, Backend, Asynchronous' },
+      { name: 'Java', level: 'Object-Oriented Programming, Core' },
+      { name: 'SQL', level: 'PostgreSQL, MySQL, Query Optimization' },
+      { name: 'C / C++', level: 'Data Structures & Algorithms' }
+    ]
+  },
+  {
+    id: 'ai-ml',
+    title: 'Machine Learning & AI',
+    icon: '🤖',
+    desc: 'Deep learning models, natural language sentiment processing, and high-speed computer vision.',
+    skills: [
+      { name: 'PyTorch & OpenCV', level: 'Image Processing & Dehazing (69 FPS)' },
+      { name: 'Bi-LSTM & Time Series', level: 'Sequential Modeling & Forecasting' },
+      { name: 'VADER Sentiment NLP', level: 'Textual Sentiment Classification' },
+      { name: 'Scikit-Learn', level: 'Predictive Classifiers & Regressors' },
+      { name: 'Pandas & NumPy', level: 'High-throughput Data Processing' }
+    ]
+  },
+  {
+    id: 'analytics-bi',
+    title: 'Analytics & Dashboards',
+    icon: '📊',
+    desc: 'Transforming organizational data into actionable KPIs, interactive visualizations, and dashboards.',
+    skills: [
+      { name: 'Power BI', level: 'DAX, Interactive Dashboards, Reports' },
+      { name: 'Advanced Excel', level: 'Formulas, Pivot Tables, Macros' },
+      { name: 'Data Visualization', level: 'Charts, Progress Tracking, Milestones' },
+      { name: 'Performance Metrics', level: 'Error Analysis (MAE, MAPE), KPIs' }
+    ]
+  },
+  {
+    id: 'it-infra-tools',
+    title: 'IT Infrastructure & Dev Tools',
+    icon: '🛠️',
+    desc: 'Enterprise hardware, network administration, version control, and cloud deployment pipelines.',
+    skills: [
+      { name: 'IT Infrastructure', level: 'Hardware, Windows Deployments, SSD' },
+      { name: 'Network Administration', level: 'LAN/Wi-Fi, Switches, Routers, DNS' },
+      { name: 'Git & GitHub', level: 'Branching, Collaboration, PRs' },
+      { name: 'VS Code & Jupyter', level: 'Environment Configuration, Notebooks' },
+      { name: 'Deployment Tools', level: 'Vercel, Streamlit, Supabase' }
+    ]
   }
 ];
 
 const Skills = () => {
+  const [selectedCategory, setSelectedCategory] = useState(0);
+
   return (
-    <section id="skills">
-      <h2 className="skillTitle">What I Do</h2>
-      <p className="skillDesc">
-        Specialize in full-stack web development, UI/UX design using Figma, and creative media including video editing, photography, and photo editing—delivering visually engaging and functional digital experiences
-      </p>
-      <div className="skillsGrid">
-        {skills.map((skill, index) => (
-          <div className="flip-card" key={index}>
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={skill.image} alt={skill.title} />
-                <h3>{skill.title}</h3>
+    <section id="skills" className="section-container">
+      <div className="section-header">
+        <span className="section-tag">Capabilities</span>
+        <h2 className="section-title">
+          Technical <span className="gradient-text">Skillset & Expertise</span>
+        </h2>
+        <p className="section-subtitle">
+          A versatile toolkit bridging enterprise business software, IT operations, full-stack development, and artificial intelligence.
+        </p>
+      </div>
+
+      <div className="skills-grid-container">
+        {skillCategories.map((cat, index) => (
+          <div
+            key={cat.id}
+            className={`skill-category-card glass-card ${selectedCategory === index ? 'card-highlighted' : ''}`}
+            onClick={() => setSelectedCategory(index)}
+          >
+            <div className="cat-card-header">
+              <span className="cat-icon">{cat.icon}</span>
+              <div>
+                <h3 className="cat-title">{cat.title}</h3>
+                <p className="cat-desc">{cat.desc}</p>
               </div>
-              <div className="flip-card-back">
-                <p>{skill.description}</p>
-              </div>
+            </div>
+
+            <div className="skill-items-list">
+              {cat.skills.map((skill, sIdx) => (
+                <div key={sIdx} className="skill-item-row">
+                  <div className="skill-name-col">
+                    <span className="skill-bullet-dot"></span>
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                  <span className="skill-level-badge">{skill.level}</span>
+                </div>
+              ))}
             </div>
           </div>
         ))}
