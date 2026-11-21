@@ -139,8 +139,8 @@ const projects = [
     description: 'Interactive cultural and tourism portal highlighting Indian travel spots, curated heritage trails, food guides, and an artisan showcase connecting local creators with global travelers.',
     stats: [
       { label: 'Features', val: 'Maps & Guides' },
-      { label: 'Artisans', val: 'Craft Showcase' },
-      { label: 'Hackathon', val: 'SIH Finalist' }
+      { label: 'Artisans', val: 'Craft Showcase' }
+
     ],
     tech: ['React.js', 'JavaScript', 'CSS3', 'Maps API', 'GitHub'],
     github: 'https://github.com/Dwarikadp/SIH',
