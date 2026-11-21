@@ -34,7 +34,7 @@ const experiences = [
       },
       {
         title: 'IT Infrastructure & Network Engineering',
-        desc: 'Troubleshooting hardware/software, Windows deployment, SSD upgrades, and managing LAN/Wi-Fi connectivity, switch/router devices, and network reliability.'
+        desc: 'Troubleshooting hardware/software, Windows deployment and managing LAN/Wi-Fi connectivity, switch/router devices, and network reliability.'
       }
     ],
     skills: ['Farvision ERP', 'React.js', 'Supabase', 'Microsoft 365', 'Power Automate', 'SQL', 'IT Infrastructure', 'LAN/Wi-Fi']
